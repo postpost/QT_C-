@@ -16,8 +16,10 @@ add_executable(ConsoleApp
   main.cpp
 
 )
-target_link_libraries(ConsoleApp Qt${QT_VERSION_MAJOR}::Core Widgets Sql Network)
-
+target_link_libraries(ConsoleApp Qt${QT_VERSION_MAJOR}::Core
+                                 Qt${QT_VERSION_MAJOR}::Widgets
+                                 Qt${QT_VERSION_MAJOR}::Sql
+                                 Qt${QT_VERSION_MAJOR}::Network)
 include(GNUInstallDirs)
 install(TARGETS ConsoleApp
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
